@@ -9,7 +9,7 @@ describe('TodoList.vue', () => {
 
   it('masque la liste quand on clique sur Toggle', async () => {
     const wrapper = mount(TodoList)
-    await wrapper.find('button').trigger('click')
+    await wrapper.find('button#showList').trigger('click')
     expect(wrapper.findAll('li')).toHaveLength(0)
   })
 })
