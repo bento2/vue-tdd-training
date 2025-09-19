@@ -3,7 +3,7 @@
 // - Créer un objet réactif avec { x: 0, y: 0 }
 // - Ajouter deux boutons pour incrémenter x et y séparément
 
-import {reactive, ref} from "vue";
+import { ref} from "vue";
 
 const objet = ref({x: 0, y: 0});
 defineExpose({ objet })//pour le test
