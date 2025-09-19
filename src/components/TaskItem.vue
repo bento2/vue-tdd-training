@@ -10,5 +10,7 @@ const props = withDefaults(defineProps<{ done: boolean }>(), {
 </script>
 
 <template>
-  <div :class="{'completed': props.done}" :style="[`${props.done?'color:green':''}`]"><slot/></div>
+  <div :class="{'completed': props.done}" :style="props.done?'color:green':''">
+    <slot/>
+  </div>
 </template>
