@@ -1,9 +1,11 @@
 import { mount } from '@vue/test-utils'
 import Life from '../src/components/Life.vue'
+import {nextTick} from "vue";
 
 describe('Life.vue', () => {
-  it('affiche un message monté au render', () => {
+  it('affiche un message monté au render', async () => {
     const wrapper = mount(Life)
+    await nextTick() // attend que onMounted ait été appelé
     expect(wrapper.text()).toContain('Monté')
   })
 
