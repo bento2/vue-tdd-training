@@ -6,4 +6,6 @@
 
 <template>
   <!-- TODO : slot principal + slot footer -->
+  <slot name="default"></slot>
+  <slot name="footer"></slot>
 </template>

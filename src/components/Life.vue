@@ -2,8 +2,15 @@
 // TODO :
 // - Ajouter onMounted() pour afficher "Monté"
 // - Ajouter onUnmounted() pour afficher "Détruit"
+import {onMounted, onUnmounted, ref} from "vue";
+const status = ref("")
+onMounted(()=>{
+  status.value = "Monté"
+})
+
+onUnmounted(()=> status.value = "Détruit")
 </script>
 
 <template>
-  <!-- TODO : afficher messages -->
+  {{ status }}
 </template>
