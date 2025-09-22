@@ -11,14 +11,14 @@ const selectInput = ref('')
 <template>
   <form>
     <!-- TODO: Lier ces inputs avec v-model -->
-    <input type="text" />
-    <textarea></textarea>
-    <input type="checkbox" />
+    <input type="text" v-model="textInput"/>
+    <textarea v-model="textareaInput"></textarea>
+    <input type="checkbox" v-model="checkboxInput">/>
 
-    <input type="radio" value="one" />
-    <input type="radio" value="two" />
+    <input type="radio" value="one" v-model="radioInput" />
+    <input type="radio" value="two" v-model="radioInput" />
 
-    <select>
+    <select v-model="selectInput">
       <option value="a">A</option>
       <option value="b">B</option>
       <option value="c">C</option>
